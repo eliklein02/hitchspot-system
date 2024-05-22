@@ -1,7 +1,7 @@
 import { prisma } from '../lib/database.js'
 
 export const actions = {
-    add: async ({ request }) => {
+    add: async () => {
         const amountAtSpot = await prisma.amountAtSpot.findFirst({
             where: {
                 id: 1
