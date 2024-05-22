@@ -7,7 +7,7 @@ export async function GET() {
         }
     })
     const currentAmount = amountAtSpot.amount
-    const data = `<Response><say>There are ${currentAmount} people waiting</say></Response>`
+    const data = `<Response><Say>There are ${currentAmount} people waiting</Say></Response>`
     const headers = new Headers()
     headers.append('Content-Type', 'application/xml')
     return new Response(data, { headers })
