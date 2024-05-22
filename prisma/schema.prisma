@@ -9,11 +9,12 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
 
 model amountAtSpot {
-  id Int @id @default(autoincrement())
+  id     Int @id @default(autoincrement())
   amount Int
 }
